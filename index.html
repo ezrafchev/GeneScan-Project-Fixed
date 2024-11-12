@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeneScan Project</title>
+</head>
+<body>
+    <h1>Welcome to GeneScan Project</h1>
+    <div id="ideo-container"></div>
+    <script src="dist/ideogram.min.js"></script>
+    <script>
+        var ideogram = new Ideogram({
+            container: "#ideo-container",
+            organism: "human",
+            annotations: [{
+                name: "BRCA1",
+                chr: "17",
+                start: 43044295,
+                stop: 43125364
+            }]
+        });
+    </script>
+</body>
+</html>
