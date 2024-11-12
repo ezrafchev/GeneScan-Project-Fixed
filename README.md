@@ -1,46 +1,45 @@
 # ideogram
-[![Tests](https://github.com/eweitz/ideogram/actions/workflows/ci.yml/badge.svg)](https://github.com/eweitz/ideogram/actions/workflows/ci.yml)
-[![Coverage status](https://coveralls.io/repos/github/eweitz/ideogram/badge.svg?branch=master)](https://coveralls.io/github/eweitz/ideogram?branch=master)
+[![Testes](https://github.com/eweitz/ideogram/actions/workflows/ci.yml/badge.svg)](https://github.com/eweitz/ideogram/actions/workflows/ci.yml)
+[![Status de cobertura](https://coveralls.io/repos/github/eweitz/ideogram/badge.svg?branch=master)](https://coveralls.io/github/eweitz/ideogram?branch=master)
 
-[Ideogram.js](https://eweitz.github.io/ideogram/) is a JavaScript library for [chromosome visualization](https://speakerdeck.com/eweitz/designing-genome-visualizations-with-ideogramjs).
+[Ideogram.js](https://eweitz.github.io/ideogram/) é uma biblioteca JavaScript para [visualização de cromossomos](https://speakerdeck.com/eweitz/designing-genome-visualizations-with-ideogramjs).
 
-Ideogram supports drawing and animating genome-wide datasets for [human](https://eweitz.github.io/ideogram/human), [mouse](https://eweitz.github.io/ideogram/mouse), and [many other eukaryotes](https://eweitz.github.io/ideogram/eukaryotes).  The [Ideogram API](https://github.com/eweitz/ideogram/blob/master/api.md) for annotations supports [histograms](https://eweitz.github.io/ideogram/annotations-histogram), [heatmaps](https://eweitz.github.io/ideogram/annotations-heatmap), [overlays](https://eweitz.github.io/ideogram/annotations-overlaid), and points of arbitrary shape and color layered in [tracks](https://eweitz.github.io/ideogram/annotations-tracks). Ideogram can depict haploid, [diploid](https://eweitz.github.io/ideogram/ploidy-basic) or higher ploidy genomes (e.g. plants), as well as aneuploidy, [genetic recombination](https://eweitz.github.io/ideogram/ploidy-recombination), and [homologous features](https://eweitz.github.io/ideogram/homology-basic) between chromosomes.
+O Ideogram suporta o desenho e animação de conjuntos de dados de todo o genoma para [humanos](https://eweitz.github.io/ideogram/human), [camundongos](https://eweitz.github.io/ideogram/mouse) e [muitos outros eucariotos](https://eweitz.github.io/ideogram/eukaryotes). A [API do Ideogram](https://github.com/eweitz/ideogram/blob/master/api.md) para anotações suporta [histogramas](https://eweitz.github.io/ideogram/annotations-histogram), [mapas de calor](https://eweitz.github.io/ideogram/annotations-heatmap), [sobreposições](https://eweitz.github.io/ideogram/annotations-overlaid) e pontos de forma e cor arbitrárias em camadas em [trilhas](https://eweitz.github.io/ideogram/annotations-tracks). O Ideogram pode representar genomas haploides, [diploides](https://eweitz.github.io/ideogram/ploidy-basic) ou de ploidia superior (por exemplo, plantas), bem como aneuploidia, [recombinação genética](https://eweitz.github.io/ideogram/ploidy-recombination) e [características homólogas](https://eweitz.github.io/ideogram/homology-basic) entre cromossomos.
 
-Ideogram can be embedded as a [reusable component](https://github.com/eweitz/ideogram#usage) in any web page or application, and leverages D3.js and SVG to achieve fast, crisp client-side rendering. You can also integrate Ideogram with JavaScript frameworks like [Angular](https://github.com/eweitz/ideogram/tree/master/examples/angular), [React](https://github.com/eweitz/ideogram/tree/master/examples/react), and [Vue](https://github.com/eweitz/ideogram/tree/master/examples/vue), as well as data science platforms like [R](https://github.com/eweitz/ideogram/tree/master/examples/r) and [Jupyter Notebook](https://github.com/eweitz/ideogram/tree/master/examples/jupyter).
+O Ideogram pode ser incorporado como um [componente reutilizável](https://github.com/eweitz/ideogram#usage) em qualquer página da web ou aplicativo, e aproveita D3.js e SVG para alcançar renderização rápida e nítida do lado do cliente. Você também pode integrar o Ideogram com frameworks JavaScript como [Angular](https://github.com/eweitz/ideogram/tree/master/examples/angular), [React](https://github.com/eweitz/ideogram/tree/master/examples/react) e [Vue](https://github.com/eweitz/ideogram/tree/master/examples/vue), bem como plataformas de ciência de dados como [R](https://github.com/eweitz/ideogram/tree/master/examples/r) e [Jupyter Notebook](https://github.com/eweitz/ideogram/tree/master/examples/jupyter).
 
-[![All human genes](https://raw.githubusercontent.com/eweitz/ideogram/master/examples/vanilla/ideogram_histogram_all_human_genes.png)](https://eweitz.github.io/ideogram/annotations_histogram.html)
+[![Todos os genes humanos](https://raw.githubusercontent.com/eweitz/ideogram/master/examples/vanilla/ideogram_histogram_all_human_genes.png)](https://eweitz.github.io/ideogram/annotations_histogram.html)
 
-Check out [live examples](https://eweitz.github.io/ideogram/), get [up and running](#installation) with your own deployment, skim [basic usage](#usage), or dive into the [full API](api.md)!
+Confira [exemplos ao vivo](https://eweitz.github.io/ideogram/), [comece](#instalação) com sua própria implantação, veja o [uso básico](#uso) ou mergulhe na [API completa](api.md)!
 
-A [broader overview](https://speakerdeck.com/eweitz/ideogramjs-chromosome-visualization-with-javascript) is also available.  It discusses Ideogram's chromosome biology, technical architecture, and more.
+Uma [visão geral mais ampla](https://speakerdeck.com/eweitz/ideogramjs-chromosome-visualization-with-javascript) também está disponível. Ela discute a biologia cromossômica do Ideogram, arquitetura técnica e mais.
 
-# Installation
+# Instalação
 
-To link directly to the latest release, copy this snippet:
+Para vincular diretamente à versão mais recente, copie este snippet:
 ```
 <script src="https://cdn.jsdelivr.net/npm/ideogram@1.47.0/dist/js/ideogram.min.js"></script>
 ```
 
-You can also easily use the library locally:
+Você também pode usar facilmente a biblioteca localmente:
 ```
-$ cd <your local web server document root>
+$ cd <raiz do documento do seu servidor web local>
 $ git clone https://github.com/eweitz/ideogram.git
 ```
 
-Then go to [http://localhost/ideogram/examples/](http://localhost/ideogram/examples/).
+Em seguida, vá para [http://localhost/ideogram/examples/](http://localhost/ideogram/examples/).
 
-Or, if you use npm:
+Ou, se você usa npm:
 ```
 npm install ideogram
 ```
 
-You can then [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) Ideogram into an application like so:
+Você pode então [importar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) o Ideogram em um aplicativo assim:
 ```
 import Ideogram from 'ideogram';
 ```
 
-
-# Usage
+# Uso
 ```html
 <head>
   <script src="https://cdn.jsdelivr.net/npm/ideogram@1.47.0/dist/js/ideogram.min.js"></script>
@@ -60,11 +59,14 @@ import Ideogram from 'ideogram';
 </body>
 ```
 
-Many more usage examples are available at https://eweitz.github.io/ideogram/.
+Muitos mais exemplos de uso estão disponíveis em https://eweitz.github.io/ideogram/.
 
-You can also find examples of integrating Ideogram with JavaScript frameworks like [Angular](https://github.com/eweitz/ideogram/tree/master/examples/angular), [React](https://github.com/eweitz/ideogram/tree/master/examples/react), and [Vue](https://github.com/eweitz/ideogram/tree/master/examples/vue), as well as data science platforms like [R](https://github.com/eweitz/ideogram/tree/master/examples/r) and [Jupyter Notebook](https://github.com/eweitz/ideogram/tree/master/examples/jupyter).
-
+Você também pode encontrar exemplos de integração do Ideogram com frameworks JavaScript como [Angular](https://github.com/eweitz/ideogram/tree/master/examples/angular), [React](https://github.com/eweitz/ideogram/tree/master/examples/react) e [Vue](https://github.com/eweitz/ideogram/tree/master/examples/vue), bem como plataformas de ciência de dados como [R](https://github.com/eweitz/ideogram/tree/master/examples/r) e [Jupyter Notebook](https://github.com/eweitz/ideogram/tree/master/examples/jupyter).
 
 # API
 
-See the [Ideogram API reference](api.md) for detailed documentation on configuration options and methods.
+Consulte a [referência da API do Ideogram](api.md) para documentação detalhada sobre opções de configuração e métodos.
+
+---
+
+Créditos: Este projeto foi adaptado por Mariana Silva de Oliveira.
