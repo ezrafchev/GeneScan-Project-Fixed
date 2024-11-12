@@ -70,3 +70,57 @@ Consulte a [referência da API do Ideogram](api.md) para documentação detalhad
 ---
 
 Créditos: Este projeto foi adaptado por Mariana Silva de Oliveira.
+
+# Passo a Passo para Execução
+
+Este guia fornecerá instruções detalhadas para executar o projeto GeneScan em seu computador, mesmo se você não tiver experiência prévia com programação.
+
+## Pré-requisitos
+
+1. **Instalar o Git:**
+   - Windows: Baixe e instale o Git do site oficial: https://git-scm.com/download/win
+   - macOS: Instale o Homebrew (https://brew.sh/) e depois execute `brew install git` no Terminal
+   - Linux: Use o gerenciador de pacotes da sua distribuição (por exemplo, `sudo apt-get install git` no Ubuntu)
+
+2. **Instalar o Node.js:**
+   - Baixe e instale o Node.js do site oficial: https://nodejs.org/
+
+3. **Instalar um editor de texto:**
+   - Recomendamos o Visual Studio Code: https://code.visualstudio.com/
+
+## Passos para Execução
+
+1. **Clonar o repositório:**
+   - Abra o terminal (Prompt de Comando no Windows, Terminal no macOS/Linux)
+   - Execute o comando:
+     ```
+     git clone https://github.com/ezrafchev/GeneScan-Project.git
+     ```
+
+2. **Navegar até o diretório do projeto:**
+   ```
+   cd GeneScan-Project
+   ```
+
+3. **Instalar as dependências:**
+   ```
+   npm install
+   ```
+
+4. **Executar o projeto:**
+   ```
+   npm start
+   ```
+
+5. **Visualizar o projeto:**
+   - Abra seu navegador web
+   - Digite `http://localhost:8080` na barra de endereços
+
+## Solução de Problemas
+
+- Se encontrar algum erro durante a instalação das dependências, tente executar o comando como administrador/superusuário
+- Certifique-se de que as portas 8080 não estão sendo usadas por outros programas
+- Se o navegador não abrir automaticamente, tente acessar manualmente o endereço `http://localhost:8080`
+
+Para mais informações ou se encontrar problemas, por favor, abra uma issue no GitHub do projeto.
+
