@@ -1,2 +1,2 @@
 pytest==6.2.5
-pymysql==1.1.0
+pymysql==1.1.1
